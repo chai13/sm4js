@@ -213,7 +213,7 @@ class Sm4js{
         var paddingLength = UINT8_BLOCK - originalBuffer.length % UINT8_BLOCK;
         var paddedBuffer = new Uint8Array(originalBuffer.length + paddingLength);
         paddedBuffer.set(originalBuffer, 0);
-        paddedBuffer.fill(paddingLength, originalBuffer.length);
+        paddedBuffer.fill(0, originalBuffer.length);
         return paddedBuffer;
     }
     dePadding  (paddedBuffer) {
